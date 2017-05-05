@@ -16,6 +16,16 @@ body {
 .remove {
   background-color: #6acbe8;
   margin-left: 25%;
+  width: 50%;
+  font-size: 1rem;
+}
+
+.update {
+  background-color: #6acbe8;
+  margin-left: 25%;
+  width: 50%;
+  margin-top: 5px;
+  font-size: 1rem;
 }
 
 p {

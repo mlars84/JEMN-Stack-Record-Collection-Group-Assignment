@@ -48,7 +48,7 @@ function getRecords() {
           cellText += "<p>" + response[i].artist + "</p>";
           cellText += "<p>" + response[i].album + "</p>";
           cellText += "<p>" + response[i].year + "</p>";
-          cellText += '<button data-id="' + response[i]._id + '" class="remove" type="button" name="button" class="btn">Remove</button></div>';
+          cellText += '<button data-id="' + response[i]._id + '" class="remove btn" type="button" name="button" class="btn">Remove</button><button data-id="' + response[i]._id + '" class="update btn" type="button" name="button" class="btn">Update</button></div>';
           outputDiv.append(cellText);
     }
   }
