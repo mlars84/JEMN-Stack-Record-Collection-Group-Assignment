@@ -1,5 +1,6 @@
-h1 {
+.jumbotron, h1 {
   text-align: center;
+  color: #5bd92b;
 }
 
 .recordDiv {
