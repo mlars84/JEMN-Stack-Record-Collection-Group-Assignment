@@ -12,13 +12,36 @@ var port = 3978;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
-// spin up server
-app.listen(port, function(){
-  console.log('server up on:', port);
-});// end listen
+//connect to mongo db
+mongoose.connect ('mongodb://localhost:27017/fridayRecords');
+
+// define record schema
+var recordSchema = mongoose.Schema({
+  artist: String,
+  album: String,
+  year: Number,
+  imageUrl: String
+});
+
+var record = mongoose.model('records', recordSchema);
 
 // base url
 app.get( '/', function( req, res ){
   console.log( 'base url hit' );
   res.sendFile( path.resolve( 'public/views/index.html' ) );
 }); //end base get
+
+
+app.post('/addRecord', function(req, res) {
+  console.log('/addRecord POST', req.body);
+  var newRecord = record(req.body);
+  console.log('newRecord:', newRecord);
+  newRecord.save();
+  res.sendStatus(200);
+});
+
+
+// spin up server
+app.listen(port, function(){
+  console.log('server up on:', port);
+});// end listen
