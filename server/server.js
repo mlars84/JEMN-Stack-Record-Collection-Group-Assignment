@@ -31,14 +31,35 @@ app.get( '/', function( req, res ){
   res.sendFile( path.resolve( 'public/views/index.html' ) );
 }); //end base get
 
+app.get('/getRecords', function(req, res) {
+  console.log('getRecords');
+  record.find().then(function (data){
+    res.send(data);
+  });
+}); // end getRecords GET
+
+app.delete('/removeRecord', function(req, res) {
+  console.log('removeRecord');
+  record.remove({_id: req.body.id}, function(err) {
+    if(err) {
+      res.sendStatus(500);
+    }
+    else {
+      res.sendStatus(200);
+    }
+  });
+});
+
 
 app.post('/addRecord', function(req, res) {
   console.log('/addRecord POST', req.body);
   var newRecord = record(req.body);
   console.log('newRecord:', newRecord);
   newRecord.save();
-  res.sendStatus(200);
-});
+  res.send(newRecord);
+}); // end addRecord POST
+
+
 
 
 // spin up server
