@@ -48,7 +48,7 @@ app.delete('/removeRecord', function(req, res) {
       res.sendStatus(200);
     }
   });
-});
+}); // end removeRecord DELETE
 
 
 app.post('/addRecord', function(req, res) {
@@ -58,6 +58,12 @@ app.post('/addRecord', function(req, res) {
   newRecord.save();
   res.send(newRecord);
 }); // end addRecord POST
+
+
+app.put('/updateRecord', function(req, res) {
+  console.log('updateRecord PUT');
+  
+}); // end updateRecord PUT
 
 
 
