@@ -1,6 +1,8 @@
 .jumbotron, h1 {
   text-align: center;
   color: #5bd92b;
+  background-color: black;
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/ce/68/3a/ce683a43c420ddcd95e4006a14e434ac.jpg');
 }
 
 .recordDiv {

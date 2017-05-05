@@ -1,6 +1,7 @@
 body {
-  background-color: #222222;
-  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+  /*background-color: #222222;*/
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/ce/68/3a/ce683a43c420ddcd95e4006a14e434ac.jpg');
+  /*background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;*/
 }
 
 #container {
