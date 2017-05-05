@@ -46,9 +46,9 @@ function getRecords() {
 
       for (var i = 0; i < response.length; i++) {
         var cellText = '<div class="col-sm-2 recordDiv" ><img class="imageCell" data-image="' + response[i].imageUrl + '"src="'+ response[i].imageUrl +'" style="width:100%"/>';
-          cellText += '<p class="artistCell" data-artist="' + response[i].artist + '">' + response[i].artist + "</p>";
-          cellText += '<p class="albumCell" data-album="' + response[i].album + '">' + response[i].album + "</p>";
-          cellText += '<p class="yearCell" data-year="' + response[i].year + '">' + response[i].year + "</p>";
+          cellText += '<p><a class="artistCell" data-artist="' + response[i].artist + '">' + response[i].artist + "</a></p>";
+          cellText += '<p><a class="albumCell" data-album="' + response[i].album + '">' + response[i].album + "</a></p>";
+          cellText += '<p><a class="yearCell" data-year="' + response[i].year + '">' + response[i].year + "</a></p>";
           cellText += '<button data-id="' + response[i]._id + '" class="remove btn" type="button" name="button" class="btn">Remove</button><button data-id="' + response[i]._id + '" class="update btn" type="button" name="button" class="btn">Update</button></div>';
           outputDiv.append(cellText);
     }
