@@ -4,7 +4,7 @@ $(document).ready(onReady);
 function onReady() {
   getRecords();
   $('#addRecordButton').on('click', addRecord);
-  $(document).on('click', '#remove', removeRecord);
+  $(document).on('click', '.remove', removeRecord);
 }
 
 function addRecord() {
@@ -24,6 +24,10 @@ function addRecord() {
     data: recordToSend,
     success: function(response) {
       console.log(response);
+      $('#artistIn').val('');
+      $('#albumIn').val('');
+      $('#yearIn').val('');
+      $('#imageUrlIn').val('');
       getRecords();
     }
   });
@@ -40,11 +44,11 @@ function getRecords() {
       outputDiv.empty();
 
       for (var i = 0; i < response.length; i++) {
-        var cellText = '<div class="col-sm-3" ><img src="'+ response[i].imageUrl +'" style="width:100%"/>';
+        var cellText = '<div class="col-sm-2 recordDiv" ><img src="'+ response[i].imageUrl +'" style="width:100%"/>';
           cellText += "<p>" + response[i].artist + "</p>";
           cellText += "<p>" + response[i].album + "</p>";
           cellText += "<p>" + response[i].year + "</p>";
-          cellText += '<button data-id="' + response[i]._id + '" id="remove" type="button" name="button" class="btn">Remove</button></div>';
+          cellText += '<button data-id="' + response[i]._id + '" class="remove" type="button" name="button" class="btn">Remove</button></div>';
           outputDiv.append(cellText);
     }
   }

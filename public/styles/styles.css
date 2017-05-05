@@ -1,3 +1,31 @@
 h1 {
   text-align: center;
 }
+
+.recordDiv {
+  background-color: #826a7a;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+
+body {
+  background-color: #eee;
+}
+
+.remove {
+  background-color: #6acbe8;
+  margin-left: 25%;
+}
+
+p {
+  text-align: center;
+}
+
+img {
+  border: 1px solid black;
+}
+
+#inputDiv {
+  text-align: center;
+}
