@@ -2,11 +2,12 @@
   text-align: center;
   color: #5bd92b;
   background-color: black;
-  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/ce/68/3a/ce683a43c420ddcd95e4006a14e434ac.jpg');
+  /*background-image: url('https://s-media-cache-ak0.pinimg.com/originals/ce/68/3a/ce683a43c420ddcd95e4006a14e434ac.jpg');*/
+  background-image: url('https://alk3r.files.wordpress.com/2016/11/3400e-waneella3.gif?w=700');
 }
 
 .recordDiv {
-  background-color: #826a7a;
+  background-color: #7f03d7;
   padding: 10px;
   margin: 10px;
   color: white;
